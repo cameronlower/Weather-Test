@@ -11,6 +11,20 @@
 
   <script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
   <script type="text/javascript">
+  if ("geolocation" in navigator) {
+    $('.js-geolocation').show();
+  } else {
+    $('.js-geolocation').hide();
+  }
+
+  $('.js-geolocation').on('click', function() {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      loadWeather(position.coords.latitude+','+position.coords.longitude); //load weather using your lat/lng coordinates
+    });
+  });
+  </script>
+
+  <script type="text/javascript">
     $(document).ready(function() {
       $.simpleWeather({
         location: '',
@@ -39,6 +53,7 @@
 <body>
 
 <div id="weather"></div>
+<button class="js-geolocation" style="display: none;">Use Your Location</button>
 
 </body>
 </html>

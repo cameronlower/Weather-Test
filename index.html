@@ -11,11 +11,7 @@
 
   <script type="text/javascript" src="js/jquery.simpleWeather.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {  
-      getWeather(); 
-      setInterval(getWeather, 600000);
-    });
-    function getWeather() {
+    $(document).ready(function() {
       $.simpleWeather({
         location: '',
         woeid: '23424948',

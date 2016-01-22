@@ -87,12 +87,14 @@ i {
 }
 
 #weather li {
+  margin: auto;
   background: #000;
   background: rgba(255,255,255,0.90);
   padding: 20px;
   display: table-cell;
   vertical-align: middle;
   /*border-radius: 5px;*/
+  border: 1px solid #999;
   width: 33.3333333%;
 }
 

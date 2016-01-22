@@ -82,27 +82,20 @@ i {
 #weather ul {
   margin: 0;
   padding: 0;
+  display: table;
+  width: 100%;
 }
 
 #weather li {
   background: #000;
   background: rgba(255,255,255,0.90);
   padding: 20px;
-  display: inline-block;
-  border-radius: 5px;
+  display: table-cell;
+  vertical-align: middle;
+  /*border-radius: 5px;*/
+  width: 33.3333333%;
 }
 
 #weather .currently {
   margin: 0 20px;
-}
-
-button {
-  display: block;
-  margin: 15px auto;
-  width: 140px;
-  padding: 5px;
-  background: transparent;
-  color: #000;
-  border: 0;
-  border-radius: 5px;
 }
